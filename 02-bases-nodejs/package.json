@@ -4,6 +4,8 @@
   "description": "App en Nodejs",
   "main": "app.js",
   "scripts": {
+    "start":"node src/app.js",
+    "dev": "echo 'Plataforma Dev'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
