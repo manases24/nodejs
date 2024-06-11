@@ -10,14 +10,8 @@ const users = [
   ];
   
   const getUserById = (id, callback) => {
-    const user = users.find(function (user) {
-      return user.id === id;
-    });
-  
-    if (!user) {
-      return callback(`USUARIO no encontrado: ${id}`);
-    }
-    return callback(null, user);
+    const user = users.find((user) => user.id === id);
+    user ? callback(null, user) : callback(`USUARIO no encontrado: ${id}`);
   }
   
   module.exports = {
