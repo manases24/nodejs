@@ -1,4 +1,3 @@
-// const { getUUID } = require('./get-id.plugin');
 const {getUUID} = require('./get-id.plugin')
 const { getAge }  = require('./get-age.plugin');
 

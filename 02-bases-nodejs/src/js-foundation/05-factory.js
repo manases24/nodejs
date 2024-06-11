@@ -1,7 +1,5 @@
 // Factory Function es una function que retorna una function
 
-// const { getAge, getUUID } = require("../plugins");
-
 const buildMakePerson = ({ getUUID, getAge }) => {
   return ({ name, birthdate }) => {
     return {
