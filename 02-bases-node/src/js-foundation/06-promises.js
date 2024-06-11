@@ -7,7 +7,6 @@ const getPokemonById = async (id) => {
 
   // const resp = await fetch( url );
   // const pokemon = await resp.json();
-
   // throw new Error('Pokemon no existe');
 
   return pokemon.name;
