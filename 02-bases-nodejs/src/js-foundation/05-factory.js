@@ -1,10 +1,12 @@
 // Factory Function es una function que crea una function
-const { v4: uuidv4 } = require("uuid");
-const getAge = require("get-age");
+
+// const { getAge } = require("../plugin/get-age.plugin");
+// const { getUUID } = require("../plugin/get-id.plugin");
+const { getAge, getUUID } = require("../plugins");
 
 const buildPerson = ({ name, birthdate }) => {
   return {
-    id: uuidv4(),
+    id: getUUID(),
     name,
     birthdate,
     age: getAge(birthdate),
