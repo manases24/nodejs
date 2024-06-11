@@ -1,9 +1,10 @@
-const { getAge, getUUID } = require('./plugins');
+// const { getAge, getUUID } = require('./plugins');
 // const { emailTemplate } = require('./js-foundation/01-template')
 // const { proccessDes } = require('./js-foundation/02-destructuring')
 // const { getUserById } = require("./js-foundation/03-callbacks");
 // const { buildMakePerson } = require("./js-foundation/05-factory");
-const getPokemonById = require('./js-foundation/06-promises');
+// const getPokemonById = require('./js-foundation/06-promises');
+import { buildLogger } from "./plugins/logger.plugin.js";
 
 // const id = 2;
 // getUserById(id, (error, user) => {
@@ -19,10 +20,10 @@ const getPokemonById = require('./js-foundation/06-promises');
 // const john = makePerson( obj );
 // console.log({ john });
 
+// getPokemonById(4)
+//   .then( ( pokemon ) => console.log({ pokemon }) )
+//   .catch( ( err ) => console.log( err ) )
+//   .finally( () => console.log('Finalmente') );
 
-
-
-getPokemonById(4)
-  .then( ( pokemon ) => console.log({ pokemon }) )
-  .catch( ( err ) => console.log( err ) )
-  .finally( () => console.log('Finalmente') );
+const logger = buildLogger("app.js");
+logger.log("Hello, World!");
