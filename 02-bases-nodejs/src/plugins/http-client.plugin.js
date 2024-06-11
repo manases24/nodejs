@@ -9,9 +9,9 @@ const httpClientPlugin = {
     // return await resp.json();     
   },
 
-  post: async(url, body) => {},
-  put: async(url, body) => {},
-  delete: async(url) => {},
+  // post: async(url, body) => {},
+  // put: async(url, body) => {},
+  // delete: async(url) => {},
 
 };
 
