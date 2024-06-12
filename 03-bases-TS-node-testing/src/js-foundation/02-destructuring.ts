@@ -9,3 +9,5 @@ console.log(`NVM_BIN: ${NVM_BIN}`);
 const city = "Buenos Aires";
 const country = "Argentina";
 console.log(`Vivo en ${city}, ${country}`);
+
+export const characters = ['Flash','Superman', 'Green Lantern', 'Batman'];
