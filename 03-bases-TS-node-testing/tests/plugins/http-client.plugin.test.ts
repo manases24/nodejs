@@ -15,9 +15,9 @@ describe("plugins/http-client.plugin.ts", () => {
   });
 
   test("httpClientPlugin should have POST, PUT and Delete methods", () => {
-    // expect(typeof httpClientPlugin.post).toBe("function");
-    // expect(typeof httpClientPlugin.delete).toBe("function");
-    // expect(typeof httpClientPlugin.put).toBe("function");
+    expect(typeof httpClientPlugin.post).toBe("function");
+    expect(typeof httpClientPlugin.delete).toBe("function");
+    expect(typeof httpClientPlugin.put).toBe("function");
     expect(typeof httpClientPlugin.get).toBe("function");
   });
 });
