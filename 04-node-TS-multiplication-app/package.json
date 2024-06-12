@@ -2,7 +2,7 @@
   "name": "multiplication-app",
   "version": "0.0.1",
   "description": "Multiplication App",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "ts-node src/app.ts",
     "dev:nodemon": "nodemon -b 7",
