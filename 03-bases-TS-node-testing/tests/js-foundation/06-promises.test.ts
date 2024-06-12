@@ -1,6 +1,6 @@
 import { getPokemonById } from "../../src/js-foundation/06-promises";
 
-describe("Test in the js-foundation/06-promises.ts file", () => {
+describe("js-foundation/06-promises.ts", () => {
   test("getPokemonById should return a pokemon", async () => {
     const pokemonId = 1;
     const pokemonName = await getPokemonById(pokemonId);
