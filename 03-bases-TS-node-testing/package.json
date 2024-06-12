@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "App en Nodejs",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon",
     "build": "rimraf ./dist && tsc",
