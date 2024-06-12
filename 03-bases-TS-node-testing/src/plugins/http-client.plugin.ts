@@ -6,13 +6,13 @@ export const httpClientPlugin = {
     return data;
   },
 
-  post: async(url: string, body: any ) => {
-    throw new Error('Not implemented');
+  post: async (url: string, body: any) => {
+    throw new Error("Not implemented");
   },
-  put: async(url: string, body: any) => {
-    throw new Error('Not implemented');
+  put: async (url: string, body: any) => {
+    throw new Error("Not implemented");
   },
-  delete: async(url: string ) => {
-    throw new Error('Not implemented');
+  delete: async (url: string) => {
+    throw new Error("Not implemented");
   },
-
+};
