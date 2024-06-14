@@ -2,28 +2,29 @@ import fs from "fs";
 import { SaveFile } from "./save-file.use-case";
 
 describe("SaveFileUseCase", () => {
-  //   const customOptions = {
-  //     fileContent: "custom content",
-  //     fileDestination: "custom-outputs/file-destination",
-  //     fileName: "custom-table-name",
-  //   };
+  const customOptions = {
+    fileContent: "custom content",
+    fileDestination: "custom-outputs/file-destination",
+    fileName: "custom-table-name",
+  };
 
-  //   const customFilePath = `${customOptions.fileDestination}/${customOptions.fileName}.txt`;
+  const customFilePath = `${customOptions.fileDestination}/${customOptions.fileName}.txt`;
 
-  // beforeEach(() => {
-  //   jest.clearAllMocks();
-  // });
-
-  //   afterEach(() => {
-  //     const outputFolderExists = fs.existsSync("outputs");
-  //     if (outputFolderExists) fs.rmSync("outputs", { recursive: true });
-
-  //     const customOutputFolderExists = fs.existsSync(
-  //       customOptions.fileDestination
-  //     );
-  //     if (customOutputFolderExists)
-  //       fs.rmSync(customOptions.fileDestination, { recursive: true });
+  // ciclo de vida de la prueba
+  //   beforeEach(() => {
+  //     // jest.clearAllMocks();
+  //     fs.rmSync("outputs", { recursive: true });
   //   });
+
+  afterEach(() => {
+    const outputFolderExists = fs.existsSync("outputs");
+    if (outputFolderExists) fs.rmSync("outputs", { recursive: true });
+    const customOutputFolderExists = fs.existsSync(
+      customOptions.fileDestination
+    );
+    if (customOutputFolderExists)
+      fs.rmSync(customOptions.fileDestination, { recursive: true });
+  });
 
   test("should save file with default values", () => {
     const saveFile = new SaveFile();
@@ -41,17 +42,15 @@ describe("SaveFileUseCase", () => {
     expect(fileContent).toBe(options.fileContent);
   });
 
-  //   test("should save file with custom values", () => {
-  //     const saveFile = new SaveFile();
-
-  //     const result = saveFile.execute(customOptions);
-  //     const fileExists = fs.existsSync(customFilePath);
-  //     const fileContent = fs.readFileSync(customFilePath, { encoding: "utf-8" });
-
-  //     expect(result).toBe(true);
-  //     expect(fileExists).toBe(true);
-  //     expect(fileContent).toBe(customOptions.fileContent);
-  //   });
+  test("should save file with custom values", () => {
+    const saveFile = new SaveFile();
+    const result = saveFile.execute(customOptions);
+    const fileExists = fs.existsSync(customFilePath);
+    const fileContent = fs.readFileSync(customFilePath, { encoding: "utf-8" });
+    expect(result).toBe(true);
+    expect(fileExists).toBe(true);
+    expect(fileContent).toBe(customOptions.fileContent);
+  });
 
   //   test("should return false if directory could not be created", () => {
   //     const saveFile = new SaveFile();
