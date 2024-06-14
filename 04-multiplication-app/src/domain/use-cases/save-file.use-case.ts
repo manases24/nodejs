@@ -5,25 +5,26 @@ export interface SaveFileUseCase {
 }
 
 export interface Options {
-  fileName?: string;
   fileContent: string;
   fileDestination?: string;
+  fileName?: string;
 }
 
 export class SaveFile implements SaveFileUseCase {
-  constructor() {}
+  constructor() /** repository: StorageRepository */
+  {}
 
   execute({
     fileContent,
-    fileName = "table.txt",
     fileDestination = "outputs",
+    fileName = "table",
   }: Options): boolean {
     try {
       fs.mkdirSync(fileDestination, { recursive: true });
       fs.writeFileSync(`${fileDestination}/${fileName}.txt`, fileContent);
       return true;
     } catch (error) {
-      console.log(error);
+      // console.error(error); // winston
       return false;
     }
   }
