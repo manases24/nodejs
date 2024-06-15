@@ -1,4 +1,5 @@
 // process.argv = ['node','app.ts','-b', '10'];
+// import './app';
 import { ServerApp } from "./presentation/server.app";
 
 describe("Test App.ts", () => {
