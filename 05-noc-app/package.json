@@ -1,7 +1,7 @@
 {
   "name": "noc-app",
   "version": "0.0.1",
-  "description": "NOC Aplication",
+  "description": "Network Operation Center (NOC)",
   "main": "app.ts",
   "scripts": {
     "dev": "tsnd --respawn --clear src/app.ts",
