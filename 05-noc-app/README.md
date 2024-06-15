@@ -20,8 +20,6 @@ npx tsc --init --outDir dist/ --rootDir src
   "start": "npm run build && node dist/app.js"
 ```
 
-```
-
 # Pasos para configurar Jest con TypeScript, en Node
 
 Documentación [oficial sobre Jest](https://jestjs.io/docs/getting-started)
@@ -61,6 +59,8 @@ testEnvironment: "jest-environment-node",
 "test": "jest",
 "test:watch": "jest --watch",
 "test:coverage": "jest --coverage",
+
+```
 
 ```
 
