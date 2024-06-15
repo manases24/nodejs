@@ -61,7 +61,3 @@ testEnvironment: "jest-environment-node",
 "test:coverage": "jest --coverage",
 
 ```
-
-```
-
-```
