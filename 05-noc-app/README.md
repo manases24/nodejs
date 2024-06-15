@@ -3,7 +3,7 @@
 1. Instalar TypeScript y demás dependencias
 
 ```
-npm i -D typescript @types/node ts-node-dev rimraf
+pnpm i -D typescript @types/node ts-node-dev rimraf
 ```
 
 2. Inicializar el archivo de configuración de TypeScript ( Se puede configurar al gusto)
