@@ -1,3 +1,20 @@
+# Proyecto NOC
+
+Crear una serie de tareas usando Clean Architecture con TypeScript
+
+# Dev
+
+1. Clonar archivo `env.template` a `.env`
+
+2. Configurar las variables de entorno
+
+```
+PORT=3000
+MAILER_EMAIL=tortuga@gmail.com
+MAILER_SECRET_KEY=abcdefghijk
+PROD=false
+```
+
 # Node con TypeScript - TS-Node-dev (preferido)
 
 1. Instalar TypeScript y demás dependencias
