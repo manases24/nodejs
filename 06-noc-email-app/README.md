@@ -15,6 +15,10 @@ MAILER_SECRET_KEY=abcdefghijk
 PROD=false
 ```
 
+3. Ejecutar el comando `pnpm install`
+
+4. Ejecutar el comando `pnpm dev`
+
 # Node con TypeScript - TS-Node-dev (preferido)
 
 1. Instalar TypeScript y demás dependencias
