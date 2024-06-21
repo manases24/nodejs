@@ -3,3 +3,4 @@ coverage/
 pnpm-lock.*
 *.log
 dist/
+.env
