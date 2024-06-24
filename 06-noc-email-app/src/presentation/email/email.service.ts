@@ -1,5 +1,7 @@
 import nodemailer from "nodemailer";
 import { envs } from "../../config/plugins/envs.plugin";
+import { LogRepository } from "../../domain/repository/log.repository";
+import { LogEntity, LogSeverityLevel } from "../../domain/entities/log.entity";
 
 interface SendMailOptions {
   to: string | string[];
@@ -22,6 +24,8 @@ export class EmailService {
     },
   });
 
+  constructor(private readonly logRepository: LogRepository) {}
+
   async sendEmail(options: SendMailOptions): Promise<boolean> {
     try {
       const sentInformation = await this.transporter.sendMail({
@@ -30,14 +34,25 @@ export class EmailService {
         html: options.htmlBody,
         attachments: options.attachements,
       });
-      console.log(sentInformation);
+      const log = new LogEntity({
+        level: LogSeverityLevel.low,
+        message: "Email sent",
+        origin: "email.service.ts",
+      });
+      this.logRepository.saveLog(log);
       return true;
     } catch (error) {
+      const log = new LogEntity({
+        level: LogSeverityLevel.high,
+        message: "Email not sent",
+        origin: "email.service.ts",
+      });
+      this.logRepository.saveLog(log);
       return false;
     }
   }
 
-  async sendEmailWithFileSystemLogs(to: string | string[]) {
+  sendEmailWithFileSystemLogs(to: string | string[]) {
     const subject = "Logs del servidor";
     const htmlBody = `
         <h3>Logs de sistemas - NOC </h3>
@@ -45,9 +60,9 @@ export class EmailService {
         <p>Ver logs adjuntos</p>
       `;
     const attachements: Attachment[] = [
-      { filename: "logs-all.log", path: "./" },
+      { filename: "logs-all.log", path: "../../../logs/logs-all.log" },
     ];
 
-    this.sendEmail({ to, subject, attachements, htmlBody });
+    return this.sendEmail({ to, subject, attachements, htmlBody });
   }
 }

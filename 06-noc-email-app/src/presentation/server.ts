@@ -11,16 +11,17 @@ export class Server {
   public static start() {
     console.log("Server started");
 
-    const emailService = new EmailService();
-    emailService.sendEmail({
-      to: "hugo.orlando2030@gmail.com",
-      subject: "Logs de sistemas",
-      htmlBody: `
-        <h3>Logs de sistemas - NOC </h3>
-        <p>Ola polar y heladas intensas en CABA y alrededores: como continuara el tiempo durante la semana</p>
-        <p>Ver logs adjuntos</p>
-      `,
-    });
+    const emailService = new EmailService(fileSystemLogRepository);
+    // emailService.sendEmail({
+    //   to: "hugo.orlando2030@gmail.com",
+    //   subject: "Logs de sistemas",
+    //   htmlBody: `
+    //     <h3>Logs de sistemas - NOC </h3>
+    //     <p>Ola polar y heladas intensas en CABA y alrededores: como continuara el tiempo durante la semana</p>
+    //     <p>Ver logs adjuntos</p>
+    //   `,
+    // });
+    emailService.sendEmailWithFileSystemLogs("hugo.orlando2030@gmail.com");
 
     CronService.createJob("*/5 * * * * *", () => {
       const url = "https://discord.com/";
