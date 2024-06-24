@@ -1,11 +1,22 @@
 import mongoose from "mongoose";
 
 const logSchema = new mongoose.Schema({
-  level: String,
   message: {
     type: String,
     required: true,
   },
-  origin: String,
-  createdAt: String,
+  origin: {
+    type: String,
+  },
+  level: {
+    type: String,
+    enum: ["low", "medium", "high"],
+    default: "low",
+  },
+  createdAt: {
+    type: Date,
+    default: new Date(),
+  },
 });
+
+export const LogModel = mongoose.model("Log", logSchema);
