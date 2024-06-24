@@ -14,6 +14,11 @@ MAILER_EMAIL=adfad@gmail.com
 MAILER_SECRET_KEY=adfadfaa
 MAILER_SERVICE=gmail
 PROD=false
+
+MONGO_USERNAME=superman
+MONGO_PASSWORD=superman
+MONGO_DB_NAME=noc
+MONGO_URL=
 ```
 
 3. Ejecutar el comando `pnpm install`
