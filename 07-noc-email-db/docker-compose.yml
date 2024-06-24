@@ -8,7 +8,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
     volumes:
-      - ./noc-vol:/data/db
+      - ./mongo:/data/db
     ports:
       - "27017:27017"
     command: [ "--auth" ]
@@ -26,5 +26,5 @@ services:
     restart: always
 
 volumes:
-  noc-vol:
+  mongo:
     external: false
