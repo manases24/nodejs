@@ -1,7 +1,6 @@
 import { Server } from "./presentation/server";
 
-// Function anonima
-(() => {
+(async () => {
   main();
 })();
 
