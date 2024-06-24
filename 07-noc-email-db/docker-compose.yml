@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  mongo-db:
+    container_name: ${MONGO_DB_NAME}
+    image: mongo:6.0.6
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - ./noc-vol:/data/db
+    ports:
+      - "27017:27017"
+    command: [ "--auth" ]
+
+  mongo-express:
+    depends_on:
+      - db
+    image: mongo-express:1.0.2-20-alpine3.19
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: ${MONGO_USERNAME}
+      ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_PASSWORD}
+      ME_CONFIG_MONGODB_SERVER: ${MONGO_DB_NAME}
+    ports:
+      - 8080:8081
+    restart: always
+
+volumes:
+  noc-vol:
+    external: false
