@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "tsnd --respawn --clear src/app.ts",
     "build": "rimraf ./dist && tsc",
-    "start": "pnpm run build && node dist/app.js"
+    "start": "pnpm run build && node dist/app.js",
+    "prisma:init": "npx prisma init",
+    "prisma:migrate:dev": "npx prisma migrate dev",
+    "prisma:dev:deploy": "prisma migrate deploy",
+    "prisma:studio": "npx prisma studio"
   },
   "keywords": [],
   "author": "",
