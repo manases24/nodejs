@@ -23,11 +23,14 @@ MONGO_URL=mongodb://superman:superman@localhost:27017
 POSTGRES_USER=superman
 POSTGRES_PASSWORD=superman
 POSTGRES_DB=noc
+POSTGRES_URL=
 ```
 
 3. Ejecutar el comando `pnpm install`
 
-4. Ejecutar el comando `pnpm dev`
+4. Levantar DB con el comando `docker compose up -d`
+
+5. Ejecutar el comando `pnpm dev`
 
 # Node con TypeScript - TS-Node-dev (preferido)
 
