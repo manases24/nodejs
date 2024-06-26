@@ -13,14 +13,5 @@ async function main() {
     dbName: envs.MONGO_DB_NAME,
   });
 
-  const newLog = await LogModel.create({
-    message: "Test message from Mongo",
-    origin: "app.ts",
-    level: "low",
-  });
-
-  await newLog.save();
-  console.log(newLog);
-
   // Server.start();
 }
