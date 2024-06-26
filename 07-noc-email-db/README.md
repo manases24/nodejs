@@ -18,7 +18,11 @@ PROD=false
 MONGO_USERNAME=superman
 MONGO_PASSWORD=superman
 MONGO_DB_NAME=noc
-MONGO_URL=
+MONGO_URL=mongodb://superman:superman@localhost:27017
+
+POSTGRES_USER=superman
+POSTGRES_PASSWORD=superman
+POSTGRES_DB=noc
 ```
 
 3. Ejecutar el comando `pnpm install`
