@@ -15,15 +15,15 @@ MAILER_SECRET_KEY=adfadfaa
 MAILER_SERVICE=gmail
 PROD=false
 
-MONGO_USERNAME=superman
-MONGO_PASSWORD=superman
-MONGO_DB_NAME=noc
-MONGO_URL=mongodb://superman:superman@localhost:27017
+MONGO_USERNAME="johndoe"
+MONGO_PASSWORD="randompassword"
+MONGO_DB_NAME="noc"
+MONGO_URL="mongodb://johndoe:randompassword@localhost:27017"
 
-POSTGRES_USER=superman
-POSTGRES_PASSWORD=superman
-POSTGRES_DB=noc
-POSTGRES_URL=
+POSTGRES_USER="johndoe"
+POSTGRES_PASSWORD="randompassword"
+POSTGRES_DB="noc"
+POSTGRES_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
 ```
 
 3. Ejecutar el comando `pnpm install`
