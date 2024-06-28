@@ -1,0 +1,7 @@
+node_modules/
+coverage/
+pnpm-lock.*
+*.log
+dist/
+.env
+mongo-vol/
