@@ -8,6 +8,8 @@
     "build": "rimraf ./dist && tsc",
     "start": "pnpm run build && node dist/app.js",
     "prisma:init": "npx prisma init",
+    "prisma:generate": "prisma generate",
+    "prisma:db:pull": "prisma db pull",
     "prisma:migrate:dev": "npx prisma migrate dev",
     "prisma:dev:deploy": "prisma migrate deploy",
     "prisma:studio": "npx prisma studio"
