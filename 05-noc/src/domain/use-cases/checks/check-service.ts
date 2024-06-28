@@ -1,4 +1,4 @@
-import { LogSeverityLevel } from "./../../entities/log.entity";
+import { LogSeverityLevel } from "../../entities/log.entity";
 import { LogEntity } from "../../entities/log.entity";
 import { LogRepository } from "../../repository/log.repository";
 
