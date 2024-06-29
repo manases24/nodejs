@@ -1,3 +1,4 @@
+import { envs } from "./config/envs.config";
 import { Server } from "./presentation/server";
 
 // Function anonima
@@ -6,6 +7,6 @@ import { Server } from "./presentation/server";
 })();
 
 function main() {
-  const server = new Server();
+  const server = new Server({ port: envs.PORT });
   server.start();
 }
