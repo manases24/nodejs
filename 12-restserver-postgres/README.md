@@ -1,3 +1,28 @@
+# API REST
+
+Crear una serie de tareas usando Clean Architecture con TypeScript
+
+## Dev
+
+1. Clonar archivo `env.template` a `.env`
+
+2. Configurar las variables de entorno
+
+```
+PORT=3000
+
+POSTGRES_USER="johndoe"
+POSTGRES_PASSWORD="randompassword"
+POSTGRES_DB="noc"
+POSTGRES_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
+```
+
+3. Ejecutar el comando `pnpm install`
+
+4. Levantar DB con el comando `docker compose up -d`
+
+5. Ejecutar el comando `pnpm dev`
+
 # Node con TypeScript - TS-Node-dev (preferido)
 
 1. Instalar TypeScript y demás dependencias
