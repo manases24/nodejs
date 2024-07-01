@@ -20,7 +20,7 @@ export class Server {
     this.app.use(express.static("public"));
 
     //* Routes
-    this.app.use("/api/v1/", this.routes);
+    this.app.use("/api/v1", this.routes);
 
     this.app.listen(this.port, () => {
       console.log(`Server running on port ${this.port}`);
