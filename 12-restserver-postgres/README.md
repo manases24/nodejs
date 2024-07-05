@@ -10,11 +10,11 @@ Crear una serie de tareas usando Clean Architecture con TypeScript
 
 ```
 PORT=3000
-
 POSTGRES_USER="johndoe"
 POSTGRES_PASSWORD="randompassword"
-POSTGRES_DB="noc"
-POSTGRES_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
+POSTGRES_DB="TODO"
+POSTGRES_URL="postgresql://johndoe:randompassword@localhost:5432/TODO?schema=public"
+POSTGRES_PORT=5432
 ```
 
 3. Ejecutar el comando `pnpm install`
