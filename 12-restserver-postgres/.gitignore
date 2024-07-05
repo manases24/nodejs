@@ -5,3 +5,4 @@ pnpm-lock.*
 dist/
 .env
 keys/
+postgres-db
