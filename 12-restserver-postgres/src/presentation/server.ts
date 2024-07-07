@@ -15,7 +15,8 @@ export class Server {
   }
 
   async start() {
-    //* Middlewares
+    //*
+    this.app.use(express.json());
     //* Public folder
     this.app.use(express.static("public"));
 
